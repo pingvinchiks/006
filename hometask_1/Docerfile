@@ -1,6 +1,0 @@
-FROM ubuntu
-
-EXPOSE 8080
-RUN apt update
-CMD apt install -y apache
-CMD tail -f dev/null
