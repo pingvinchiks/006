@@ -1,0 +1,10 @@
+version: 3
+servise:
+	webserver:
+		build: ./Dockerfile
+		restart: always
+		ports: -"8081:8081"
+	db:
+		build: ./Dockerfile2
+		restart: always
+		ports: -"3306:3306"
