@@ -1,0 +1,25 @@
+
+Vagrant.configure("2") do |config|
+  config.vm.define "ubuntu" do |ubuntu|
+  ubuntu.vm.box = "ubuntu/bionic64" 
+  ubuntu.vm.network "forwarded_port", guest: 80, host: 8080
+  ubuntu.vm.synced_folder "~/06/hometask_5/reshetun", "/home/vagrant/"
+  ubuntu.vm.provision "shell",
+  inline: <<-SHELL 
+    # Install docker and docker compose
+    sudo -i
+    echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+    curl -sSL https://get.docker.com/ | sh
+    usermod -aG docker vagrant
+    curl -L https://github.com/docker/compose/releases/download/1.5.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose    
+    docker-compose up -d
+   SHELL
+
+end
+  
+ 
+
+
+end
+
