@@ -1,9 +1,9 @@
 
-[group1]
+[1]
 marik1 ansible_host = 192.168.1.10 ansible_user = vagrant ansible_ssh_port=2221 ansible_ssh_private_key_file='.vagrant/machines/marik1/virtualbox/private_key'
 
 
-[group2]
+[2]
 marik2 ansible_host = 192.168.1.11 ansible_user = vagrant ansible_ssh_port=2222 ansible_ssh_private_key_file='.vagrant/machines/marik2/virtualbox/private_key'
 
 
