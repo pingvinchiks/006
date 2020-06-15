@@ -1,11 +1,5 @@
 ---
 # tasks file for role_a
-- name: install epel
-  yum:
-    name: epel-release
-    state: present
-  tags: [nginx]
-
 - name: install nginx
   yum:
     name: nginx
