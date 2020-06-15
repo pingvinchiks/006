@@ -1,11 +1,11 @@
 - name: marik1
-  hosts: group1
+  hosts: 1
   become: yes
   roles:
    - role_a
 
 - name: marik2
-  hosts: group2
+  hosts: 2
   become: yes
   roles:
    - role_b
