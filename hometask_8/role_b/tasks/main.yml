@@ -1,0 +1,17 @@
+---
+# tasks file for role_b
+- name: install epel
+  yum:
+    name: epel-release
+    state: present
+  tags: [apache2]
+
+- name: install apache2
+  yum:
+    name: apache2
+    state: present
+  tags: [apache2]
+
+- git:
+   repo: https://github.com/pingvinchiks/006
+   dest: /home/mmmq/tese

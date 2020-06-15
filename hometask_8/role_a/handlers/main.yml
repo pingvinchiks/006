@@ -1,0 +1,6 @@
+---
+# handlers file for role_a
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
