@@ -1,10 +1,11 @@
 FROM ubuntu:18.04 
-MAINTAINER <marikresetun@gmail.com>
+MAINTAINER <marik resetun>
 
-RUN apt-get update
-CMD apt-get install -y apache2
-
+CMD apt-get update
 
 
-EXPOSE 8081
+
+
+
+EXPOSE 8080
 ENTRYPOINT tail -f /dev/null

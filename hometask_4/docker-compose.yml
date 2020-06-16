@@ -3,8 +3,8 @@ servise:
 	webserver:
 		build: ./Dockerfile
 		restart: always
-		ports: -"8081:8081"
+		ports: -"8080:8080"
 	db:
 		build: ./Dockerfile2
 		restart: always
-		ports: -"3306:3306"
+		ports: -"8080:8080"
